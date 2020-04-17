@@ -1,0 +1,6 @@
+compiler: gcc
+language: cpp
+
+script:
+  - g++ sources/Gato.cpp -std=c++17
+  - g++ sources/Coloreado_Grafos.cpp -std=c++17
