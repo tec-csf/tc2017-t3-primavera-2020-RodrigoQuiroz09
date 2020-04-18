@@ -36,7 +36,7 @@ El proyecto debe seguir la siguiente estructura de carpetas:
 
 ## 2. Solución
 
-*PROBLEMA 1: COLOREADO DE UN GRAFO
+PROBLEMA 1: COLOREADO DE UN GRAFO
 Para este problema se planteó el siguiente problema:
 
 "Dado un grafo conexo y un número m > 0, llamamos colorear el grafo a asignar un número i (1 ≤ i ≤ m) a cada vértice, de forma que dos vértices adyacentes nunca tengan asignados números iguales. Deseamos implementar un algoritmo que coloree un grafo dado."
@@ -67,18 +67,15 @@ La siguiente imagen demuestra una pequeña fracción del recorrido recursivo del
 ![Settings Window](https://raw.github.com/tec-csf/tc2017-t3-primavera-2020-RodrigoQuiroz09/master/examples/tic_tac_toe.jpg)
 
 Por último como es un algoritmo recursivo este depende bastante tanto de la profundidad que obtenga el arbol de recursividad como todos los posibles movimientos en cada etapa de análisis. Por lo tanto se le es asignada una complejidad temporal de O(b^m), donde b es el número de movimientos legales en cada punto y m es la profundidad máxima del árbol.
-
-*
-
 ### 2.1 Pasos a seguir para utilizar la aplicación
 
-    *1. Abrir la terminal del equipo donde se comprobarán la eficiencia de los algoritmos.*
-    *2. Acceder al directorio donde se clonará el repositorio de github.*
-    *3. Utilizar el siguiente comando para clonar el repositorio: https://github.com/tec-csf/tc2017-t3-primavera-2020-RodrigoQuiroz09.git*
-    *4. Compilar los códigos a su preferencia usando el compilador de g++. Linea de compilaión recomendada: g++ Algoritmo.cpp -o nombre_ejecutable*
-    *5. Ejecutar ambos código para confirmar la soluciones a los problemas*
-    *6. Para el de Coloreado_Grafos.cpp el input del usuario es nulo ya que el coloreado está basado en un grafo ejemplo visto anteriormente en la explicación de la solución*
-    *7. Para el código de Gato.cpp el usuario debe de interactuar con el algoritmo hasta que uno de los 2 gane*
+    1. Abrir la terminal del equipo donde se comprobarán la eficiencia de los algoritmos.
+    2. Acceder al directorio donde se clonará el repositorio de github.
+    3. Utilizar el siguiente comando para clonar el repositorio: https://github.com/tec-csf/tc2017-t3-primavera-2020-RodrigoQuiroz09.git
+    4. Compilar los códigos a su preferencia usando el compilador de g++. Linea de compilaión recomendada: g++ Algoritmo.cpp -o nombre_ejecutable
+    5. Ejecutar ambos código para confirmar la soluciones a los problemas
+    6. Para el de Coloreado_Grafos.cpp el input del usuario es nulo ya que el coloreado está basado en un grafo ejemplo visto anteriormente en la explicación de la solución
+    7. Para el código de Gato.cpp el usuario debe de interactuar con el algoritmo hasta que uno de los 2 gane
 
 ## 3. Referencias
 
