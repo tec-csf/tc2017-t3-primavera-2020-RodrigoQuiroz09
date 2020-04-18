@@ -110,7 +110,6 @@ class Grafo {
 
 };
 
-
     int main() 
     { 
         ///Para observar la composición visual del grafo leer el README.md

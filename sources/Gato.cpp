@@ -35,6 +35,16 @@ int turno=0;
 
 int posible[9];
 
+/**
+* Checa que casillas hay disponibles en el tablero.
+*  
+* Se van comparando cada una de las casillas y si esta se encuentra vacia almacena la tupla
+* que simboliza una pocisión en el tablero.
+*
+* @param vector conformado por pares el cual es pasado por referencia.
+* 
+*/
+
 void checar_disponibilidad(vector <pair<int,int> > &regreso){
 
     int z=0;
@@ -58,6 +68,15 @@ void checar_disponibilidad(vector <pair<int,int> > &regreso){
     cout<<"\n";
 }
 
+/**
+* Checa que el número de casillas disponibles en el tablero.
+*  
+* Se van comparando cada una de las casillas y si esta se encuentra vacia 
+* se añade a un contador.
+*
+* @return int tamaño de casillas disponibles.
+* 
+*/
 int antes_de_checar_disponibilidad(){
     int tamano=0;
 
@@ -74,12 +93,21 @@ int antes_de_checar_disponibilidad(){
   return tamano;  
 }
 
+
+/**
+* Comparaciones para no repetir codigo en la funcion checkWinner().
+*
+* @param char a,b,c; -> Son las casillas de una linea.
+* @return bool -> Regresa si todas son iguales pero diferente de espacio vacio.
+* 
+*/
 bool comparacion(char a, char b, char c) {
   return (a == b && b == c && a !=' ');
 }
 
 
 
+//Dar formato a la impresión de el tablero.
 void imprimir_tablero(){
   int z=0;
     for (int i=0;i<3;++i,z++){
@@ -103,7 +131,15 @@ void imprimir_tablero(){
     cout<<"     |     |    "<<endl;
 }
 
-char checkWinner() {
+/**
+* Comparaciones para escoger un ganador.
+*
+* Realiza por cada tipo de caso de éxito las comparaciones de lineas iguales.
+*
+* @return char ganador regresa el caractér que ha ganado o si ha sido un empate.
+* 
+*/
+char checar_ganador() {
   char ganador = ' ';
 
   // horizontal
@@ -139,12 +175,18 @@ char checkWinner() {
   }
 }
 
-
-
+/**
+* Metodo recursivo que decide la mejor opción de la ai.
+*
+* Realiza todo tipo de combinaciones al llamarse recursivamente cubriendo todos los casos
+* y va regresando el caso que tenga mayor beneficio para la ia.
+*
+* @return int beneficio con el cual decicimos si es una opción óptima o no.
+* 
+*/
 int minimax(bool es_max){
 
-
-  char resultado=checkWinner();
+  char resultado=checar_ganador();
   if(resultado!='0'){
     if(resultado=='X'){
 
@@ -189,6 +231,13 @@ int minimax(bool es_max){
 
 }
 
+/**
+* Metodo auxiliar que empieza la recursividad.
+*
+* Empieza por un ciclo anidado que va decidiendo conforme al método recursivo, la mejor decisión
+* y genera el cambio en el tablero.
+* 
+*/
 void mejor_movimiento(){
   int mejor_puntaje=-100000;
   int casilla [2];
@@ -215,11 +264,17 @@ void mejor_movimiento(){
 
 }
 
-
+/**
+* Metodo del movimiento del jugador.
+*
+* Con base en el vector de disponibilidades va checando si el input del usuario es válido o no
+* y si es válido modifica el tablero con la posición asignada.
+*
+* @param vector diponibilidad en el tablero de manera actualizada.
+* 
+*/
 
 void movimiento_jugador(int x, vector <pair<int,int> > &lista_disponibilidad){
-
-
 
     int s=antes_de_checar_disponibilidad();
     int j=0;
@@ -249,6 +304,7 @@ void movimiento_jugador(int x, vector <pair<int,int> > &lista_disponibilidad){
     turno=1;
 }
 
+
 int main(){
   char ganador;
   bool juego=true;
@@ -270,7 +326,7 @@ int main(){
         mejor_movimiento();
       }
 
-      ganador=checkWinner();
+      ganador=checar_ganador();
       
         if(ganador=='1'){
           juego=false;
