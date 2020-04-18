@@ -49,8 +49,7 @@ A la hora de colorear los vértices, estos se guardan en una estructura auxiliar
 La siguiente imagen es el grafo utilizado como ejemplo para la verificación del algoritmo
 
 
-![Settings Window](https://raw.github.com/tec-csf
-/tc2017-t3-primavera-2020-RodrigoQuiroz09/master/examples/Grafo_ejemplo.png)
+![Settings Window](https://raw.github.com/tec-csf/tc2017-t3-primavera-2020-RodrigoQuiroz09/master/examples/Grafo_ejemplo.png)
 
 Como dentro del algoritmo de colorear se basa en 2 ciclos anidados para poder recorrer todas las opciones sin equivocarse la complejidad tiende a ser O(V^2), siendo V el número de vértices, pero como en los grafos las aristas dictan las adyacencias lo cual son una parte fundamental a la hora de asignar el color es tomado en cuenta su tiempo de procesamiento A es el número de aristas. Por consiguiente la complejidad temporal del algoritmo es de: O(V^2+A).
 
@@ -65,8 +64,7 @@ Su comportamiento se basa en el puntaje que se obtiene a partir de una cierta se
 
 La siguiente imagen demuestra una pequeña fracción del recorrido recursivo del minimax y como este siempre busca la opción con mayor puntaje.
 
-![Settings Window](https://raw.github.com/tec-csf
-/tc2017-t3-primavera-2020-RodrigoQuiroz09/master/examples/tic_tac_toe.jpg)
+![Settings Window](https://raw.github.com/tec-csf/tc2017-t3-primavera-2020-RodrigoQuiroz09/master/examples/tic_tac_toe.jpg)
 
 Por último como es un algoritmo recursivo este depende bastante tanto de la profundidad que obtenga el arbol de recursividad como todos los posibles movimientos en cada etapa de análisis. Por lo tanto se le es asignada una complejidad temporal de O(b^m), donde b es el número de movimientos legales en cada punto y m es la profundidad máxima del árbol.
 
